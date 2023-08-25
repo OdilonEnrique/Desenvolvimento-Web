@@ -1,0 +1,20 @@
+h1{
+    color: orange;
+    font-weight: 700;
+    /* Pra deixar em negrito basta usar 700 no font-weight e pra regular 400 */
+    font-size: 24px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+h2{
+    color: #E5db08;
+    font-weight: 200;
+}
+
+p{  
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: 4px;
+    word-spacing: 4px;
+    line-height: 24px;
+}

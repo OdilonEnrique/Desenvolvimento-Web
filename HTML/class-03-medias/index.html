@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class - 03 - Medias</title>
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <img src="./challenges/images/img-1.jpg" alt="Casal sentado no lago"><!-- tag vazia -->
+    
+    <!-- alt é o atributo para fornecer um texto quando a imagem não é encontrada na tag -->
+
+    <img src="./challenges/images/img-2.jpg" alt="Pessoa escrevendo um bilhete">
+
+    <audio 
+     src="./challenges/sounds/perfect.mp3" 
+     controls
+     preload="none"
+     >
+    </audio>
+    <!-- autoplay: a música inicia automaticamente na página -->
+    <!-- controls: aparece o controle do aúdio -->
+    <!-- preload auto: carrega primeiro o audio -->
+    <!-- preload none: carrega o audio apenas quando vc aperta pra carregar -->
+    <!-- preload metadata: carrega uma parte do audio -->
+
+    <video 
+        src="./challenges/videos/videoplayback"
+        controls
+        preload="metadata"
+        autoplay
+        muted
+        >
+    </video>
+    <!-- O preload tbm funciona pra tag video -->
+    <!-- muted: pro video ficar mutado -->
+
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/C5fLxtJH2Qs" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+         allowfullscreen>
+    </iframe>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15856.034945504745!2d-39.534850665471275!3d-6.520576076512736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a2f719b740e767%3A0x833bf57677c864a4!2zSnVjw6FzLCBDRSwgNjM1ODAtMDAw!5e0!3m2!1spt-BR!2sbr!4v1688079886758!5m2!1spt-BR!2sbr" 
+    width="600" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <h1 class="h1">Perfect</h1>
+    <h1 class="h1">Perfect</h1>
+    <h2 class="h1">Perfect</h2>
+</body>
+</html>

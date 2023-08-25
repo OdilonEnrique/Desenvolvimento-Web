@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+}
+.square{
+    background-color: pink;
+    height: 120px;
+    width: 120px;
+    padding: 16px;
+}
+
+#y{
+  background: orange;
+  display: inline-block;
+  margin-top: 32px;
+}
+
+#x{
+    display: inline-block;
+    margin-left: 32px;
+    margin-top: 32px;
+}
+
+
+#z{
+  background-color: rgb(134, 21, 240);
+  margin-top: 70px;
+  margin-left: 40px;
+  position: absolute;
+  top:33px;
+  z-index: 3;
+}

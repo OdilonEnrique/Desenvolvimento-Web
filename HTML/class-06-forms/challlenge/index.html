@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  fieldset{
+    width: 320px; 
+    margin: 0 auto;
+}
+
+    section, span { text-align: center;}
+
+    legend { 
+      text-align: center;
+      text-decoration: solid;
+      
+    }
+  
+
+ 
+</style>
+<body>
+ <header>
+   <center><h1>Cadastro</h1></center>
+
+ </header>
+ <main>
+
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+        <form action="" method="get">
+      <section>
+         <label for="name">Nome</label>
+          <input type="text"
+          placeholder="Digite seu nome" 
+          id="name"
+           name="name"
+          required
+          autofocus>
+      </section>
+            <br>
+          <section>
+          <label for="nascimento">Nascimento</label>
+            <input type="date"
+             name="nascimento" 
+             id="nascimento"
+             required>
+          </section>
+            <br>
+            <section>
+         <label for="RG" id="RG" name="RG">RG</label>
+              <input type="text"
+              placeholder="Informe seu RG"
+              name="RG"
+              id="RG"
+              required
+              pattern="[0-9]{11}"
+              maxlength="11"
+              minlength="9"
+              title="O campo tem que conter 11 digitos">
+            </section>
+            <br>
+           <section>
+           <label for="CPF" id="CPF" name="CPF">CPF</label>
+             <input type="text"
+             placeholder="Informe seu CPF"
+             id="CPF"
+             name="CPF"
+             required
+             pattern="[0-9]{11}"
+             maxlength="11"
+             title="Digite os numeros do seu CPF">
+           </section>
+           <br>
+          <section>
+          <span>
+            <label for="masculino">Masculino</label>
+            <input type="radio" name="term" id="masculino" value="m">
+
+          </span>
+           <span>
+
+             <label for="feminino">Feminino</label>
+               <input type="radio" name="term" id="feminino" value="f" checked>
+           </span>
+          </section>
+           <br>
+        </fieldset>
+          <br>
+        <fieldset>
+            <legend>Linguagens de Dominio</legend>
+       <span>
+        <input type="checkbox" name="HTML" id="HTML"> 
+     <label for="HTML">HTML</label>
+       </span>
+       <span>
+            <input type="checkbox" name="CSS" id="CSS">
+            <label for="CSS">CSS</label>
+       </span>
+        <span>
+         <input type="checkbox" name="JavaSript" id="JavaSript">
+           <label for="JavaSript">JavaSript</label>
+        </span>
+        <span>
+        <input type="checkbox" name="SQL" id="SQL">
+          <label for="SQL">SQL</label>
+        </span>
+        </fieldset>
+       <br><br>
+        <fieldset>
+       <legend>Dados de login</legend>
+<br>
+<section>
+
+  <label for="email" id="email" name="email">Email</label>
+  <br>
+  <input type="email" name="email" id="email"
+  placeholder="seuemail@gmail.com"><br>
+</section>
+<section>
+
+  <label for="Senha" id="senha" name="senha">Senha</label>
+  <br>
+  <input type="password" id="senha" name="senha"
+  placeholder="Digite a senha"> <br>
+  <br>
+</section>
+<section>
+
+  <label for="foto" id="foto" name="foto">Imagem</label> <br>
+  <input type="file"
+  accept="image/*"><br>
+</section>
+      
+</fieldset>
+<br><br>
+<fieldset>
+ <legend>observações</legend>
+  <section>
+   
+    <textarea name="" id="" cols="30" rows="10"
+     maxlength="320"
+     placeholder="Faça as observações sobre seu perfil"></textarea>
+  </section>
+</fieldset> <br>
+  <center>  <button type="submit">Enviar</button>
+   <button type="reset">Limpar</button> </center>
+        </form>
+ </main>
+</body>
+</html>

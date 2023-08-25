@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 06 Forms</title>
+    <style>
+        form{
+            width: 380px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Class Forms</h1>
+    <form method="get">
+        <label for="name">Name:</label>
+        <input 
+            type="text"
+            id="name"
+            name="nome"
+            placeholder="Digite seu nome"
+            required
+        >
+        <button type="submit">
+            Enviar
+        </button> 
+    </form>
+
+      <form method="get">
+            <fieldset>
+                <legend>Login</legend><br>
+                <section>
+                    <label for="email">E-mail</label><br>
+                    <input 
+                        type="email" 
+                        id="email"
+                        name="email"
+                        required
+                    >
+                </section><br>
+                <section>
+                    <label for="password">Password</label><br>
+                    <input 
+                        type="password" 
+                        id="password"
+                        name="password"
+                        required
+                    >
+                </section><br>
+                <button type="submit">Enviar</button>
+            </fieldset>
+        </form>
+
+        <form method="get">
+            <input 
+                type="number"
+                placeholder="Digite sua idade"
+                max="100"
+                min="0"
+                step="5"
+            >
+            <br><br>
+            <input 
+                type="datetime-local"
+            >
+            <br><br>
+
+            <input 
+                type="range"
+                max="100"
+                min="0"
+                value="10"
+                step="5"
+            >
+            <br><br>
+
+            <input 
+                type="file"
+                accept=".pdf"
+                multiple
+            >
+             <!--.png, .jpg, entre outros podem ser utilizados-->
+            <br><br>    
+
+            <input 
+                type="color"
+                value="#ffffff"
+                list="groupColor"
+            >
+
+            <br><br>
+
+           <datalist id="groupColor">
+                <option>#0000ff</option>
+                <option>#00ff00</option>
+                <option>#ff0000</option>
+                <option>#ff00ff</option>
+                <option>#ffff00</option>
+            </datalist> 
+            <br><br>
+            
+            <label for="html">HTML</label>
+            <input type="checkbox" id="html">
+
+            <label for="css">CSS</label>
+            <input type="checkbox" id="css">
+
+            <br><br>
+
+            <label for="s">Sim</label>
+            <input type="radio" name="term" id="s" checked>
+
+            <label for="n">Não</label>
+            <input type="radio" name="term" id="n">
+
+            <br><br>
+
+            <label for="fruits">Frutas</label>
+            <select name="fruits" id="fruits">
+                <option value="manga">Manga</option>
+                <option value="acerola">Acerola</option>
+                <option value="abacaxi">Abacaxi</option>
+            </select>
+            <br><br>
+
+            <label for="">Observações</label>
+            <br><br>
+            <textarea name="" id="" cols="30" rows="10" maxlength="255"></textarea>
+            <br><br>
+            <button>
+              Enviar   
+            </button>
+        </form>
+</body>
+</html>
