@@ -2,10 +2,10 @@ let yourName = prompt("Digite o seu nome");
 
 alert("Bem-Vindo " + yourName + "! \nVamos Fazer uma soma");
 
-let number1 = prompt("Digite o primeiro número");
+let number1 = Number(prompt("Digite o primeiro número"));
 
-let number2 = prompt("Digite o segundo número");
+let number2 = Number(prompt("Digite o segundo número"));
 
-let soma = +number1 + +number2;
+let soma = Number(number1 + number2);
 
-alert("A soma de " + +number1 + "+" + +number2 + "=" + +soma);
+alert("A soma de " + number1 + "+" + number2 + "=" + soma);
