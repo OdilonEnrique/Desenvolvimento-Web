@@ -1,6 +1,6 @@
-let num1 = parseInt(prompt("Digite o primeiro número"));
+let num1 = Number(prompt("Digite o primeiro número"));
 
-let num2 = parseInt(prompt("Digite o segundo número"));
+let num2 = Number(prompt("Digite o segundo número"));
 
 let soma = num1 + num2;
 let sub = num1 - num2;
