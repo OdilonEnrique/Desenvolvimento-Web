@@ -14,5 +14,4 @@ const getLoan = true;
 console.log(!saveMoney || getLoan);
 console.log(saveMoney || getLoan);
 console.log(saveMoney || !getLoan);
-console.log(saveMoney || !getLoan);
 console.log(!saveMoney || !getLoan);
