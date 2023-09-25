@@ -5,4 +5,6 @@ let calc = (num1) => {
   return result;
 };
 
-document.write(calc(metro));
+const converted = calc(metro);
+document.write(converted + "km/h");
+
