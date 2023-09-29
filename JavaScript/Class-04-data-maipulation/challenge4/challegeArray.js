@@ -12,4 +12,4 @@ console.log(deleteElementArray(30, techs));
 console.log(deleteElementArray("HTML", techs));
 console.log(deleteElementArray("XHTML", techs));
 console.log(deleteElementArray("CSS", techs));
-console.log(deleteElementArray("JS", techs));
+console.log(deleteElementArray("JS", techs)); 
