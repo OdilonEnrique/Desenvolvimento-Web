@@ -8,5 +8,5 @@ const media = (nota1, nota2) => {
 if (media(nota1, nota2) >= 7.0) {
   document.write(" Você está aprovado, sua média é:" + media(nota1, nota2));
 } else {
-  document.write(" Você está reprovado, sua média é:" + media(nota1, nota2)); 
+  document.write(" Você está reprovado, sua média é:" + media(nota1, nota2));
 }
