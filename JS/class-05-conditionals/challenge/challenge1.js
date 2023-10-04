@@ -1,15 +1,18 @@
-const media = Number(prompt("Digite sua nota"));
+const media = prompt("Digite sua nota");
 
-const calc = (media) => {
-  if (media <= 100  && media >= 90) {
+const calc = (mediaParam) => {
+  if (typeof mediaParam === "string") {
+    mediaParam = Number(mediaParam.replace(",", "."));
+  }
+  if (mediaParam <= 100 && mediaParam >= 90) {
     alert("Você foi aprovado, está no grupo A");
-  } else if (media <= 89 && media >= 80) {
+  } else if (mediaParam < 90 && mediaParam >= 80) {
     alert("Você foi aprovado, está no grupo B");
-  } else if (media <= 79 && media >= 70) {
+  } else if (mediaParam < 80 && mediaParam >= 70) {
     alert("Você foi aprovado, está no grupo C");
-  } else if (media <= 69 && media >= 60) {
+  } else if (mediaParam < 70 && mediaParam >= 60) {
     alert("Você foi reprovado, está no grupo D");
-  } else if (media < 60 && media >= 0) {
+  } else if (mediaParam < 60 && mediaParam >= 0) {
     alert("Você foi reprovado, está no grupo F");
   } else {
     alert("Número digitado não é aceito no sistema ABCDF");
