@@ -14,7 +14,7 @@ let numero = Number(temperaturaA.replace(simbolo, ""));
 try {
   switch (simbolo) {
     case "F":
-      if (-459.67 <= numero && 211.73 >= numero) {
+      if (-459.67 <= numero) {
         let calcC = ((numero - 32) * 5) / 9;
         let calcK = calcC + 273;
         console.log(numero);
@@ -22,12 +22,13 @@ try {
         console.log(calcK);
         document.write(temperaturaA + " = " + calcC + "C  = " + calcK + "K");
       } else {
+        alert("O valor digitado não pertence a esta escala");
         throw new Error("O valor digitado não pertence a esta escala");
       }
       break;
 
     case "C":
-      if (99.85 >= numero && numero >= -273.15) {
+      if (numero >= -273.15) {
         let calcF = (numero * 9) / 5 + 32;
         let calcKelvin = numero + 273;
         console.log(numero);
@@ -37,25 +38,30 @@ try {
           temperaturaA + " = " + calcF + "F  = " + calcKelvin + "K"
         );
       } else {
+        alert("O valor digitado não pertence a esta escala");
         throw new Error("O valor digitado não pertence a esta escala");
       }
 
       break;
 
     case "K":
-      if (0 <= numero && numero <= 373.15) {
+      if (0 <= numero) {
         let calcCelsius = numero - 273;
         let calcFarenheit = ((calcCelsius - 32) * 5) / 9;
+        console.log(numero);
+        console.log(calcCelsius);
+        console.log(calcFarenheit);
         document.write(
           temperaturaA + " = " + calcFarenheit + "F  = " + calcCelsius + "C"
         );
       } else {
+        alert("O valor digitado não pertence a esta escala");
         throw new Error("O valor digitado não pertence a esta escala");
       }
       break;
 
     default:
-      alert("O número não corresponde as informações estabelecidas");
+      alert("O formato foi escrito de forma incorreta");
       break;
   }
 } catch (error) {
