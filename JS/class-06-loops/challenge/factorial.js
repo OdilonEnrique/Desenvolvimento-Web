@@ -1,6 +1,10 @@
-let numero = Number(prompt("Digite o número que você quer descobrir o fatorial"));;
+let num = Number(prompt("Digite o número que você quer descobrir o fatorial"));
 
-for (let index = numero-1; index > 0; index--) {
-    numero = index * numero;
+function calcFac(numero) {
+    for (let index = numero - 1; index > 0; index--) {
+        numero = index * numero;
+    }
+    return numero;
 }
-alert(numero);
+
+alert(calcFac(num));
