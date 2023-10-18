@@ -42,9 +42,9 @@ Digite a opção desejada:
         if (listItens.includes(itemArray)) {
           alert("Este item já foi cadastrado");
         } else {
-          alert("Item cadastrado com sucesso!");
           listItens.push(itemArray);
           console.log(listItens);
+          alert(`"${itemArray}" cadastrado com sucesso!`);
         }
       }
     }
