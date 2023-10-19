@@ -34,18 +34,21 @@ Digite a opção desejada:
   } else if (menuOption === "1") {
     while (true) {
       const itemArray = prompt("Digite o novo item que você quer adicionar");
-      if (itemArray === "") {
-        alert("Adicione o item já que não foi informado");
-      } else if (itemArray === null) {
+
+      if (itemArray === null) {
         break;
+      }
+
+      const newItemArray = itemArray.trim().split(" ").filter(Boolean).join(" ");
+
+      if (newItemArray === "") {
+        alert("Adicione o item já que não foi informado");
+      } else if (listItens.includes(newItemArray)) {
+        alert("Este item já foi cadastrado");
       } else {
-        if (listItens.includes(itemArray)) {
-          alert("Este item já foi cadastrado");
-        } else {
-          listItens.push(itemArray);
-          console.log(listItens);
-          alert(`"${itemArray}" cadastrado com sucesso!`);
-        }
+        listItens.push(newItemArray);
+        console.log(listItens);
+        alert(`"${newItemArray}" cadastrado com sucesso!`);
       }
     }
   } else if (menuOption === "2") {
@@ -62,10 +65,14 @@ Digite a opção desejada:
         const removeItem = prompt("Digite o item que você quer remover");
         if (removeItem === null) {
           break;
-        } else if (removeItem === "") {
+        } 
+        
+        const newRemoveItemArray = removeItem.trim().split(" ").filter(Boolean).join(" ");
+        
+        if (newRemoveItemArray === "") {
           alert("Digite o valor do elemento que você quer apagar");
-        } else if (listItens.includes(removeItem)) {
-          let index = listItens.indexOf(removeItem);
+        } else if (listItens.includes(newRemoveItemArray)) {
+          let index = listItens.indexOf(newRemoveItemArray);
           if (index > -1) {
             listItens.splice(index, 1);
           }
