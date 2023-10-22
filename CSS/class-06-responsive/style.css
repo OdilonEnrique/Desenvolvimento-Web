@@ -1,0 +1,48 @@
+:root{
+    font-size: 62.5%;
+}
+
+main{
+    max-width: 42rem;
+    margin: auto;
+    padding: 2.4rem;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+.boxImage{
+    max-width: 42rem;
+    height: auto;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3/1;
+    object-fit: cover;
+    object-position: center;
+}
+
+p{
+    font-size: 2rem;
+}
+
+@media (max-width: 2048px){
+    main {
+        background: orange;
+    }
+    img {
+        aspect-ratio: 1/1;
+    }
+}
+
+@media (max-width: 420px){
+    main {
+        background: purple;
+    }
+    img {
+        aspect-ratio: 1/1;
+    }
+}
