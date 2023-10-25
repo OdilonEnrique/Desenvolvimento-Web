@@ -1,0 +1,18 @@
+// ⚠Desafio 19
+
+// Uma escola precisa selecionar os melhores alunos para estágio
+// Use os métodos de Array para percorer lista de alunos e calcular médias
+// O critério será por média >= 7 e as faltas menores que 5 para filtrar alunos
+
+const students = [
+    { name: "Aluno A", grades: [7, 7, 6], absences: 3 },
+    { name: "Aluno B", grades: [6, 8, 7], absences: 4 },
+    { name: "Aluno C", grades: [9, 8, 10], absences: 6 },
+    { name: "Aluno D", grades: [9, 7, 8], absences: 2 },
+    { name: "Aluno E", grades: [8, 7, 5], absences: 7 },
+  ];
+
+
+const estagio = students.filter((value) => value.absences < 5 && ((value.grades[0] + value.grades[1] + value.grades[2]) / 3) >= 7)
+
+console.table(estagio);
