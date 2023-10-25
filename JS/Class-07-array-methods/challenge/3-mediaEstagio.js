@@ -13,6 +13,29 @@ const students = [
   ];
 
 
-const estagio = students.filter((value) => value.absences < 5 && ((value.grades[0] + value.grades[1] + value.grades[2]) / 3) >= 7)
+// const estagio = students.filter((value) => value.absences < 5 && ((value.grades[0] + value.grades[1] + value.grades[2]) / 3) >= 7)
 
-console.table(estagio);
+// console.table(estagio);
+
+const studentsAverage = students.map((student) => {
+  const average =
+    student.grades.reduce((prev, grade) => prev + grade, 0) / student.grades.length;
+
+  return {
+    name: student.name,
+    average: average,
+    absences: student.absences,
+  };
+});
+
+const selectedStudents = studentsAverage.filter((student) => {
+  if (student.average >= 7 && student.absences < 5) {
+    return {
+      name: student.name,
+      average: student.average,
+      absences: student.absences,
+    };
+  }
+});
+
+console.table(selectedStudents);
