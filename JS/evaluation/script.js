@@ -48,13 +48,13 @@ console.log(teste(apelido));
 
 // Questão 4 (Data Manipulation):
 // Usando os métodos FIFO e LIFO, crie um array com 3 valos e posteriormente insira mais um valor no final e substitua o do início por outro.
-const array4 = [1, 2, 3]
+const array4 = ["A", "B", "C"]
 
-array4.push(4)
+array4.push("D")
 
 array4.shift();
 
-array4.unshift(0)
+array4.unshift("E")
 
 console.log(array4);
 
@@ -65,7 +65,10 @@ console.log(array4);
 for (let index = 0; index < array4.length; index++) {
     const element = array4[index];
     console.log(element);
-    
+}
+
+for(const iterator of array4){
+    console.log(iterator);
 }
 
 // Questão 6 (while):
