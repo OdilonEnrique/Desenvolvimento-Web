@@ -1,0 +1,164 @@
+PS C:\Users\CLIENTE\Desktop\Class Git> git --vers
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+PS C:\Users\CLIENTE\Desktop\Class Git> git init
+Initialized empty Git repository in C:/Users/CLIENTE/Desktop/Class Git/.git/
+
+The most similar command is
+PS C:\Users\CLIENTE\Desktop\Class Git> git config --global user.email "odilonegduarte@gmail.com"
+PS C:\Users\CLIENTE\Desktop\Class Git> git config --list --global
+user.name=Odilon Enrique
+PS C:\Users\CLIENTE\Desktop\Class Git> git config --global core.editor
+PS C:\Users\CLIENTE\Desktop\Class Git> git config --list --global     
+user.name=Odilon Enrique
+user.email=odilonegduarte@gmail.com
+PS C:\Users\CLIENTE\Desktop\Class Git> git config --global core.editor "code -w"
+PS C:\Users\CLIENTE\Desktop\Class Git> git config --list --global
+user.name=Odilon Enrique
+user.email=odilonegduarte@gmail.com
+core.editor=code -w
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\CLIENTE\Desktop\Class Git> git status
+
+No commits yet
+
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+PS C:\Users\CLIENTE\Desktop\Class Git> git commit
+fatal: could not read commit message: No such file or directory
+PS C:\Users\CLIENTE\Desktop\Class Git> git commit -m "add base html"
+[master (root-commit) 3e20d0d] add base html
+ 1 file changed, 11 insertions(+)
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\CLIENTE\Desktop\Class Git> git log
+commit 3e20d0d8fdc22853b7784264cd9775e65ce272d5 (HEAD -> master)
+Author: Odilon Enrique <odilonegduarte@gmail.com>
+
+    add base html
+PS C:\Users\CLIENTE\Desktop\Class Git> git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+PS C:\Users\CLIENTE\Desktop\Class Git> git commit -m "add project title"
+[master cbb5190] add project title
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\CLIENTE\Desktop\Class Git> git log
+Date:   Thu Aug 24 20:06:33 2023 -0300
+
+
+commit 3e20d0d8fdc22853b7784264cd9775e65ce272d5
+Author: Odilon Enrique <odilonegduarte@gmail.com>
+Date:   Thu Aug 24 19:53:22 2023 -0300
+
+PS C:\Users\CLIENTE\Desktop\Class Git> git restore .
+PS C:\Users\CLIENTE\Desktop\Class Git> git add .
+PS C:\Users\CLIENTE\Desktop\Class Git> git commit -m "add lorem paragrafo"
+[master 9e98839] add lorem paragrafo
+ 1 file changed, 1 insertion(+)
+PS C:\Users\CLIENTE\Desktop\Class Git> git log
+Author: Odilon Enrique <odilonegduarte@gmail.com>
+Date:   Thu Aug 24 20:15:21 2023 -0300
+
+    add lorem paragrafo
+
+commit cbb51909fbb06ef93e4884fbe7b0fb6408acd8f9
+Author: Odilon Enrique <odilonegduarte@gmail.com>
+Date:   Thu Aug 24 20:06:33 2023 -0300
+
+    add project title
+PS C:\Users\CLIENTE\Desktop\Class Git> git log
+Author: Odilon Enrique <odilonegduarte@gmail.com>
+Date:   Thu Aug 24 20:15:21 2023 -0300
+
+    add lorem paragrafo
+
+commit cbb51909fbb06ef93e4884fbe7b0fb6408acd8f9
+Author: Odilon Enrique <odilonegduarte@gmail.com>
+Date:   Thu Aug 24 20:06:33 2023 -0300
+
+    add project title
+PS C:\Users\CLIENTE\Desktop\Class Git> git log
+Author: Odilon Enrique <odilonegduarte@gmail.com>
+Date:   Thu Aug 24 20:15:21 2023 -0300
+
+
+commit cbb51909fbb06ef93e4884fbe7b0fb6408acd8f9
+Author: Odilon Enrique <odilonegduarte@gmail.com>
+Date:   Thu Aug 24 20:06:33 2023 -0300
+
+    add project title
+PS C:\Users\CLIENTE\Desktop\Class Git> git commit --amend  -m "add lorem paragraph"
+[master 1db5cac] add lorem paragraph
+ Date: Thu Aug 24 20:15:21 2023 -0300
+ 1 file changed, 1 insertion(+)
+PS C:\Users\CLIENTE\Desktop\Class Git> git log
+Date:   Thu Aug 24 20:15:21 2023 -0300
+
+
+commit cbb51909fbb06ef93e4884fbe7b0fb6408acd8f9
+Author: Odilon Enrique <odilonegduarte@gmail.com>
+Date:   Thu Aug 24 20:06:33 2023 -0300
+
+    add project title
+PS C:\Users\CLIENTE\Desktop\Class Git> git add .
+PS C:\Users\CLIENTE\Desktop\Class Git> git commit -m "add title paragraph"
+[master aa6a4d6] add title paragraph
+ 1 file changed, 1 insertion(+)
+PS C:\Users\CLIENTE\Desktop\Class Git> git log
+Date:   Thu Aug 24 20:25:35 2023 -0300
+
+    add title paragraph
+
+commit 1db5cac3f02e603a991ac34501bdd1818aeb2c01
+Author: Odilon Enrique <odilonegduarte@gmail.com>
+Date:   Thu Aug 24 20:15:21 2023 -0300
+
+    add lorem paragraph
+PS C:\Users\CLIENTE\Desktop\Class Git> git reset --soft HEAD~1 
+PS C:\Users\CLIENTE\Desktop\Class Git> git log
+commit 1db5cac3f02e603a991ac34501bdd1818aeb2c01 (HEAD -> master)
+Author: Odilon Enrique <odilonegduarte@gmail.com>
+Date:   Thu Aug 24 20:15:21 2023 -0300
+
+    add lorem paragraph
+
+commit cbb51909fbb06ef93e4884fbe7b0fb6408acd8f9
+Author: Odilon Enrique <odilonegduarte@gmail.com>
+Date:   Thu Aug 24 20:06:33 2023 -0300
+
+    add project title
+:...skipping...
+Author: Odilon Enrique <odilonegduarte@gmail.com>
+Date:   Thu Aug 24 20:15:21 2023 -0300
+
+    add lorem paragraph
+
+commit cbb51909fbb06ef93e4884fbe7b0fb6408acd8f9
+Author: Odilon Enrique <odilonegduarte@gmail.com>
+Date:   Thu Aug 24 20:06:33 2023 -0300
+
+    add project title
+
+commit 3e20d0d8fdc22853b7784264cd9775e65ce272d5
+Author: Odilon Enrique <odilonegduarte@gmail.com>
+Date:   Thu Aug 24 19:53:22 2023 -0300
+
+    add base html
+~
+~
+~
+PS C:\Users\CLIENTE\Desktop\Class Git> git reset --hard HEAD~2
+HEAD is now at 3e20d0d add base html
+PS C:\Users\CLIENTE\Desktop\Class Git> 
