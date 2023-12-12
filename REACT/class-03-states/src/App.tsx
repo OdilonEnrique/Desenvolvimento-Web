@@ -1,10 +1,11 @@
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { UserCard } from "./components/UserCard";
 
 type UserData = {
   name: string;
   avatar_url: string;
   bio: string;
-}
+};
 
 export function App() {
   const [count, setCount] = useState(0);
@@ -43,17 +44,16 @@ export function App() {
       <p>Count: {count}</p>
       <button onClick={addCount}>Add&gt;</button>
 
-      <form onSubmit={handleSubmit} style={{textAlign: "center", marginTop: 24}}>
+      <form
+        onSubmit={handleSubmit}
+        style={{ textAlign: "center", marginTop: 24 }}
+      >
         <input type="text" onChange={handleChangeName} />
         <button>Pesquisar</button>
       </form>
 
       {data && (
-        <section>
-          <h2>{data.name}</h2>
-          <img src={data.avatar_url} alt="" />
-          <p>{data.bio}</p>
-      </section>
+        <UserCard name={data.name} avatar_url={data.avatar_url} bio={data.bio} />
       )}
     </>
   );
