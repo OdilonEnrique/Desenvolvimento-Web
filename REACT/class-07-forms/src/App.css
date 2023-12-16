@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form{
+    width: 240px;
+}
+
+label{
+    margin-top: 12px;
+}
+
+section{
+    margin-top: 16px;
+}
+
+input{
+    width: 100%;
+    padding: 6px 8px;
+}
+
+button{
+    margin-top: 20px;
+    width: 100%;
+    padding: 6px 8px;
+}
+
+.error{
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    display: block;
+}
