@@ -1,0 +1,19 @@
+--DDL
+CREATE TABLE students (
+    id   INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT    NOT NULL,
+    age  INT
+);
+
+DROP TABLE students;
+
+--DML
+INSERT INTO students (name, age)
+VALUES ("Enrique", 20),
+("Karmen", 30);
+
+UPDATE students SET age = 25 WHERE id = 1;
+
+DELETE FROM students WHERE id = 1;
+
+DELETE FROM students WHERE id < 3 and id > 1;
