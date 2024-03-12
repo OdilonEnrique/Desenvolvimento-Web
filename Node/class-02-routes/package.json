@@ -1,0 +1,28 @@
+{
+  "name": "class-02-routes",
+  "version": "1.0.0",
+  "description": "add server routes",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "build": "tsup src",
+    "start": "node dist/server.js"
+  },
+  "keywords": [
+    "server",
+    "routes",
+    "node.js",
+    "typescript"
+  ],
+  "author": "Odilon Enrique",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "tsup": "^8.0.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
