@@ -9,4 +9,7 @@ app.listen(port, () => {
   console.log(`Server is running on PORT ${port}...`);
 });
 
+// middleware
+app.use(express.json());
+
 app.use(router);
