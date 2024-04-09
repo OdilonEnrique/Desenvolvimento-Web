@@ -29,6 +29,6 @@ export const userRepository = {
 
   async getByEmail(email: string) {
     const db = await sqliteConnnection();
-    return db.get("SELECT * FROM users WHERE id = ?", [email]);
+    return db.get("SELECT * FROM users WHERE email = ?", [email]);
   },
 };
