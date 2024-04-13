@@ -59,14 +59,14 @@ export const userControllers = {
 
   async read(req: Request, res: Response, next: NextFunction) {
     try {
-      const userID = "922565ed-007d-408e-9ceb-896d5adbf594";
+      const userID = req.UserID;
       const user = await userRepository.getByID(userID);
       if (!user) throw res.status(404).json({ message: "user not found!" });
 
       const { name, email } = user;
       console.log(user);
 
-      return res.status(200).json({name, email});
+      return res.status(200).json({ name, email });
     } catch (error) {
       return next(error);
     }
